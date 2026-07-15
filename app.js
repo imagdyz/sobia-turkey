@@ -2,7 +2,7 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Telegram Config (أدخل توكن البوت والـ Chat ID الخاص بك هنا)
-const TELEGRAM_BOT_TOKEN = '8601802500:AAGWyk7Yiw9TUoufHiK-kHdlO8nK3Rq-tGE';
+const TELEGRAM_BOT_TOKEN = '8601802500:AAGWyk7Yiw9TUoufHiKkHdlO8nK3RqtGE';
 const TELEGRAM_CHAT_ID = '8601802500';
 
 const menuData = {
