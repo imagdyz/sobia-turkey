@@ -9,6 +9,7 @@ const menuData = {
   categories: {
     juices: { name: "العصائر الفريش", icon: "🍹", desc: "عصائر طبيعية طازجة تروي عطشك" },
     sobia: { name: "السوبيا", icon: "🥥", desc: "أشهى أنواع السوبيا بالنكهات المختلفة" },
+    icecream: { name: "آيس كريم", icon: "🍦", desc: "آيس كريم بنكهات متنوعة - بوله أو بسكوته" },
     sweets: { name: "الحلو", icon: "🍨", desc: "ألذ أطباق الأرز بلبن والحلويات" },
     liters: { name: "مشروبات باللتر", icon: "🫙", desc: "مشروبات عائلية باللتر تكفي الجميع" }
   },
@@ -29,6 +30,28 @@ const menuData = {
     { id: "sobia-mocha", category: "sobia", name: "سوبيا موكا", price: 25, desc: "سوبيا بنكهة الموكا المميزة", sizes: [{ id: "s", name: "صغير", price: 25 }, { id: "m", name: "وسط", price: 30 }, { id: "l", name: "كبير", price: 40 }] },
     { id: "sobia-hazelnut", category: "sobia", name: "سوبيا بندق", price: 30, desc: "سوبيا غنية بقطع البندق", sizes: [{ id: "s", name: "صغير", price: 30 }, { id: "m", name: "وسط", price: 40 }, { id: "l", name: "كبير", price: 50 }] },
     { id: "sobia-pistachio", category: "sobia", name: "سوبيا فسدق", price: 35, desc: "سوبيا فاخرة بقطع الفسدق", sizes: [{ id: "s", name: "صغير", price: 35 }, { id: "m", name: "وسط", price: 45 }, { id: "l", name: "كبير", price: 65 }] },
+
+    // آيس كريم - بوله 20 / بسكوته 25 (لوتس وفسدق وكاجو: بوله 30 / بسكوته 35)
+    { id: "ice-lotus", category: "icecream", name: "لوتس", price: 30, desc: "آيس كريم بنكهة اللوتس المميزة", sizes: [{ id: "bowl", name: "بوله", price: 30 }, { id: "biscuit", name: "بسكوته", price: 35 }] },
+    { id: "ice-vanilla", category: "icecream", name: "فانيليا", price: 20, desc: "آيس كريم بنكهة الفانيليا الكلاسيكية", sizes: [{ id: "bowl", name: "بوله", price: 20 }, { id: "biscuit", name: "بسكوته", price: 25 }] },
+    { id: "ice-mango", category: "icecream", name: "مانجا", price: 20, desc: "آيس كريم بنكهة المانجا الطازجة", sizes: [{ id: "bowl", name: "بوله", price: 20 }, { id: "biscuit", name: "بسكوته", price: 25 }] },
+    { id: "ice-berry", category: "icecream", name: "توت", price: 20, desc: "آيس كريم بنكهة التوت اللذيذة", sizes: [{ id: "bowl", name: "بوله", price: 20 }, { id: "biscuit", name: "بسكوته", price: 25 }] },
+    { id: "ice-snickers", category: "icecream", name: "اسنيكرس", price: 20, desc: "آيس كريم بنكهة السنيكرس الشهية", sizes: [{ id: "bowl", name: "بوله", price: 20 }, { id: "biscuit", name: "بسكوته", price: 25 }] },
+    { id: "ice-coffee", category: "icecream", name: "قهوه", price: 20, desc: "آيس كريم بنكهة القهوة الغنية", sizes: [{ id: "bowl", name: "بوله", price: 20 }, { id: "biscuit", name: "بسكوته", price: 25 }] },
+    { id: "ice-kitkat", category: "icecream", name: "كيت كات", price: 20, desc: "آيس كريم بنكهة الكيت كات المقرمشة", sizes: [{ id: "bowl", name: "بوله", price: 20 }, { id: "biscuit", name: "بسكوته", price: 25 }] },
+    { id: "ice-mandolin", category: "icecream", name: "ماندولين", price: 20, desc: "آيس كريم بنكهة الماندولين المميزة", sizes: [{ id: "bowl", name: "بوله", price: 20 }, { id: "biscuit", name: "بسكوته", price: 25 }] },
+    { id: "ice-oreo", category: "icecream", name: "اوريو", price: 20, desc: "آيس كريم بنكهة الأوريو اللذيذة", sizes: [{ id: "bowl", name: "بوله", price: 20 }, { id: "biscuit", name: "بسكوته", price: 25 }] },
+    { id: "ice-pistachio", category: "icecream", name: "فسدق", price: 30, desc: "آيس كريم بنكهة الفسدق الفاخرة", sizes: [{ id: "bowl", name: "بوله", price: 30 }, { id: "biscuit", name: "بسكوته", price: 35 }] },
+    { id: "ice-cashew", category: "icecream", name: "كاجو", price: 30, desc: "آيس كريم بنكهة الكاجو الفاخرة", sizes: [{ id: "bowl", name: "بوله", price: 30 }, { id: "biscuit", name: "بسكوته", price: 35 }] },
+    { id: "ice-metdalaa", category: "icecream", name: "متدلعه", price: 20, desc: "آيس كريم متدلعه بمزيج نكهات مميز", sizes: [{ id: "bowl", name: "بوله", price: 20 }, { id: "biscuit", name: "بسكوته", price: 25 }] },
+    { id: "ice-honey-cake", category: "icecream", name: "كيكه عسل", price: 20, desc: "آيس كريم بنكهة كيكة العسل", sizes: [{ id: "bowl", name: "بوله", price: 20 }, { id: "biscuit", name: "بسكوته", price: 25 }] },
+    { id: "ice-raffaello", category: "icecream", name: "رفايلو", price: 20, desc: "آيس كريم بنكهة الرفايلو الفاخرة", sizes: [{ id: "bowl", name: "بوله", price: 20 }, { id: "biscuit", name: "بسكوته", price: 25 }] },
+    { id: "ice-bagasha", category: "icecream", name: "بغاشا", price: 20, desc: "آيس كريم بنكهة البغاشا المميزة", sizes: [{ id: "bowl", name: "بوله", price: 20 }, { id: "biscuit", name: "بسكوته", price: 25 }] },
+    { id: "ice-berry-yogurt", category: "icecream", name: "زبادي توت", price: 20, desc: "آيس كريم بنكهة الزبادي بالتوت", sizes: [{ id: "bowl", name: "بوله", price: 20 }, { id: "biscuit", name: "بسكوته", price: 25 }] },
+    { id: "ice-galaxy", category: "icecream", name: "جلاكسي", price: 20, desc: "آيس كريم بنكهة الجلاكسي الغنية", sizes: [{ id: "bowl", name: "بوله", price: 20 }, { id: "biscuit", name: "بسكوته", price: 25 }] },
+    { id: "ice-hazelnut-choco", category: "icecream", name: "شوكولاته بندق", price: 20, desc: "آيس كريم بنكهة الشوكولاتة بالبندق", sizes: [{ id: "bowl", name: "بوله", price: 20 }, { id: "biscuit", name: "بسكوته", price: 25 }] },
+    { id: "ice-dates-milk", category: "icecream", name: "بلح بلبن", price: 20, desc: "آيس كريم بنكهة البلح باللبن", sizes: [{ id: "bowl", name: "بوله", price: 20 }, { id: "biscuit", name: "بسكوته", price: 25 }] },
+    { id: "ice-banana-milk", category: "icecream", name: "موز بلبن", price: 20, desc: "آيس كريم بنكهة الموز باللبن", sizes: [{ id: "bowl", name: "بوله", price: 20 }, { id: "biscuit", name: "بسكوته", price: 25 }] },
 
     // الحلو
     { id: "rice-plain", category: "sweets", name: "أرز بلبن ساده", price: 35, desc: "طبق أرز بلبن غني وكريمي" },
@@ -109,6 +132,9 @@ function renderHome() {
       <div class="item-card-content">
         <h3>${item.name}</h3>
         <p>${item.desc.substring(0, 50)}...</p>
+        ${item.sizes ? `<div style="display: flex; gap: 0.4rem; margin-bottom: 1rem; flex-wrap: wrap;">
+          ${item.sizes.map(s => `<span style="background: rgba(2,136,209,0.08); color: var(--primary); padding: 0.2rem 0.6rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700;">${s.name}</span>`).join('')}
+        </div>` : ''}
         <div class="item-card-footer">
           <span class="price">${item.sizes ? 'يبدأ من ' : ''}${item.price} جنيه</span>
           <span class="view-details">عرض التفاصيل ←</span>
@@ -160,6 +186,9 @@ function renderCategory(catId) {
       <div class="item-card-content">
         <h3>${item.name}</h3>
         <p>${item.desc}</p>
+        ${item.sizes ? `<div style="display: flex; gap: 0.4rem; margin-bottom: 1rem; flex-wrap: wrap;">
+          ${item.sizes.map(s => `<span style="background: rgba(2,136,209,0.08); color: var(--primary); padding: 0.2rem 0.6rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700;">${s.name}</span>`).join('')}
+        </div>` : ''}
         <div class="item-card-footer">
           <span class="price">${item.sizes ? 'يبدأ من ' : ''}${item.price} جنيه</span>
           <span class="view-details">عرض التفاصيل ←</span>
@@ -202,6 +231,9 @@ function renderItemDetail(itemId) {
   const relatedHTML = related.map(rel => `
     <div class="item-card compact-card" onclick="window.location.hash = '#/item/${rel.id}'">
       <h3>${rel.name}</h3>
+      ${rel.sizes ? `<div style="display: flex; gap: 0.4rem; margin-bottom: 0.8rem; flex-wrap: wrap;">
+        ${rel.sizes.map(s => `<span style="background: rgba(2,136,209,0.08); color: var(--primary); padding: 0.2rem 0.6rem; border-radius: 50px; font-size: 0.7rem; font-weight: 700;">${s.name}</span>`).join('')}
+      </div>` : ''}
       <div class="item-card-footer">
         <span class="price">${rel.sizes ? 'يبدأ من ' : ''}${rel.price} جنيه</span>
         <span class="view-details">عرض التفاصيل ←</span>
@@ -358,6 +390,9 @@ function setupSearch() {
         <div class="item-card-content">
           <h3>${item.name}</h3>
           <p>${item.desc}</p>
+          ${item.sizes ? `<div style="display: flex; gap: 0.4rem; margin-bottom: 1rem; flex-wrap: wrap;">
+            ${item.sizes.map(s => `<span style="background: rgba(2,136,209,0.08); color: var(--primary); padding: 0.2rem 0.6rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700;">${s.name}</span>`).join('')}
+          </div>` : ''}
           <div class="item-card-footer">
             <span class="price">${item.sizes ? 'يبدأ من ' : ''}${item.price} جنيه</span>
             <span class="view-details">عرض التفاصيل ←</span>
